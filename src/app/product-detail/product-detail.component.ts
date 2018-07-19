@@ -15,8 +15,8 @@ import { switchMap } from "rxjs/operators";
 })
 export class ProductDetailComponent implements OnInit {
 
-  public currentProduct$: Observable<Product>
-
+  public currentProduct: Product;
+  public samplePlace: String = 'TEst '
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -24,11 +24,22 @@ export class ProductDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.currentProduct$ = this.route.paramMap.pipe(
+    this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.ProductService.getProduct(parseInt(params.get("product_code")))
       )
-    );
+    ).subscribe((data:Product)=>{
+      this.currentProduct = data;
+    });
   }
 
+  public editProductInfo(productName: String, productPrice:number, productGST:number){
+    console.log("Edit info "+ productName + " "+ productPrice + " "+ productGST)
+    this.currentProduct.product_name = productName
+    this.currentProduct.product_price = productPrice
+    this.currentProduct.product_gst = productGST
+    this.ProductService.updateProduct(this.currentProduct)
+
+  }
 }
+

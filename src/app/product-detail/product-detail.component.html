@@ -1,3 +1,33 @@
-<div class="container" *ngIf="currentProduct$ | async as product">
-  <h1>Product Name:</h1>
+<br>
+<br>
+<div class="container">
+  <h1>Product Name: <strong>{{currentProduct.product_name}}</strong></h1>
+  <p>Product Cost: {{currentProduct.product_price }}</p>
+  <p>Product GST: {{currentProduct.product_gst }}</p>
+
 </div>
+
+<br>
+<br>
+
+<div class="container" >
+  <h3>Update Product Information</h3>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Product Name</label>
+      <input  #productName type="Product Name" class="form-control" id="exampleInputEmail1" [(value)]="currentProduct.product_name">
+
+    </div>
+    <div class="form-group">
+      <label >Product Price</label>
+      <input #productPrice class="form-control"  placeholder="Edit Price" [(value)]="currentProduct.product_price">
+    </div>
+    <div class="form-group">
+      <label>Product GST Price</label>
+      <input #productGST class="form-control"  placeholder="GST Price" [(value)]="currentProduct.product_gst">
+    </div>
+    <button class="btn" type="button" (click)="editProductInfo(productName.value,productPrice.value,productGST.value)" >Edit</button>
+  </form>
+</div>
+
+
