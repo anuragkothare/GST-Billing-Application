@@ -33,6 +33,9 @@ This Application consists of Following Components
     To add new product add the details in the form fields. 
 
 
+Used Mock data in Services(Product-Service.js)
+
+
 ## Live Github page link
 
 https://anuragkothare.github.io/GST-Billing-Application/
