@@ -29,4 +29,8 @@ export class AddProductComponent implements OnInit {
     this.ProductService.addProduct(product)
     console.log(product)
   }
+
+  goToProducts() {
+    this.router.navigate(['/products']);
+  }
 }

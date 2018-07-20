@@ -25,10 +25,18 @@
       <label>Product GST Price</label>
       <input #productGST class="form-control"  placeholder="GST Price" [(value)]="currentProduct.product_gst">
     </div>
-    <button class="btn" type="button" (click)="editProductInfo(productName.value,productPrice.value,productGST.value)" >Edit</button>
+    <button class="btn btn-success" type="button" (click)="editProductInfo(productName.value,productPrice.value,productGST.value)" >Edit</button>
   </form>
   <br>
   <br>
+  <!-- Back button -->
+  <div class=" container  col-lg-12 col-md-6 button">
+    <p>
+        <button  type="button" class="btn btn-primary " (click)="goToProducts()">Back To All Products</button>
+      </p>
+</div>
+<br>
+<br>
 </div>
 
 

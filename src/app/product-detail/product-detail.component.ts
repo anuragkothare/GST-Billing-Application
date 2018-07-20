@@ -41,5 +41,9 @@ export class ProductDetailComponent implements OnInit {
     this.ProductService.updateProduct(this.currentProduct)
 
   }
+
+  goToProducts() {
+    this.router.navigate(['/products']);
+  }
 }
 

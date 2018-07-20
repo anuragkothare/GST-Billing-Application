@@ -30,7 +30,8 @@ This Application consists of Following Components
 
 4- Add Product Detail:
     Press the add Button present in ProductList View  to get  route to the Add product page.
-    To add new product add the details in the form fields. 
+    To add new product add the details in the form fields. And after click "Add product button" click on 
+    "back to products" button.
 
 
 Used Mock data in Services(Product-Service.js)
