@@ -19,11 +19,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 This Application consists of Following Components
 
 1- Product-Card Component:
-  This Component is to view the Product Card.
+  This Component is for the Product Card.
 
 2- ProductList Component:
-
-  This Component show all the Product Cards in the page.
+  This Component shows all the Product Cards in the page.
 
 3- Product Detail Component:
-  
+  This component shows all the details of the product.
+  There is form fileds to edit the details of the component.
+
+4- Add Product Detail:
+    Press the add Button present in ProductList View  to get  route to the Add product page.
+    To add new product add the details in the form fields. 
+
+
+## Live Github page link
+
+https://anuragkothare.github.io/GST-Billing-Application/
+
