@@ -41,14 +41,22 @@ export class ProductService {
   public updateProduct(product: Product){
     var id:number= product.product_code
     for(var ind in this.productList) {
-        if(id == this.productList[ind].product_code){
+        if(id === this.productList[ind].product_code){
           this.productList[ind] = product;
         }
     }
   }
 
   public addProduct(product: Product){
+    var id:number= product.product_code
+
     //validation if product exist or not
+    for(var ind in this.productList) {
+      if(id === this.productList[ind].product_code ) {
+        this.productList[ind] = product;
+        return
+      }
+    }
     this.productList.push(product)
   }
 
